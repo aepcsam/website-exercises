@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding-top: 40px;
+        }
+        main {
+            margin: auto;
+            display: grid;
+            background-color: white;
+            /*padding: 5px;*/
+            height:475px;
+            width:725px;
+            grid-template-columns: repeat(13, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 8px;
+            border: solid lightgrey 1px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }
+        #div1 {
+            /*Header*/
+            grid-area: 1/ 1/ 2/ 4 ;
+            background-color: #FCD802;
+            /*border: solid black 2px;*/
+            /*padding: 20px;*/
+
+        }
+        #div2 {
+            /*nav*/
+            grid-area: 2/ 1/ 7/ 1;
+            background-color: #FCD802;
+            /*padding: 20px;*/
+            /*border: solid black 2px;*/
+            /*padding-top: 70%;*/
+
+        }
+        #div3 {
+            /*ads*/
+            grid-area: 2 / 12 / 6 / 14;
+            background-color: #FCD802;
+            /*padding: 20px;*/
+            /*border: solid black 2px;*/
+            /*padding-top: 145%;*/
+        }
+        #div4 {
+            /*Article*/
+            grid-area: 2 / 4 / 6 / 12;
+            background-color: #FCD802;
+            /*border: solid black 2px;*/
+            /*padding: 20px;*/
+        }
+        #div5 {
+            /*footer*/
+            grid-area: 6 / 4 / 7 / 14 ;
+            background-color: #FCD802;
+            /*padding: 20px;*/
+            /*border: solid black 2px;*/
+            /*padding-top: 4%;*/
+        }
+
+        .style {
+            font-size: 20px;
+            color: black;
+            padding: 20px;
+            /*text-align: center;*/
+            /*font-weight: bold;*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="div1" class="style">Header</div>
+        <div id="div2" class="style">Nav</div>
+        <div id="div3" class="style">Ads</div>
+        <div id="div4" class="style">Article</div>
+        <div id="div5" class="style">Footer</div>
+    </main>
+
+</body>
+</html>

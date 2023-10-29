@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>after class sess 1</title>
+</head>
+<body>
+<script>
+
+    "use strict";
+
+
+    // Define a function named isString that takes in a value and returns a boolean if the argument provided is a string or not.
+
+    // function isString(x){
+    //     if (typeof x == 'string') {
+    //         return true;
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+    //
+    // console.log(isString(2)); //false
+    // console.log(isString(true)); //false
+    // console.log(isString("yes")); //true
+
+
+    // Define a function named isNotString that accepts an input and returns true or false based on whether an input is not a string.
+
+// function isNotString(x){
+//         if (typeof x !== "string"){
+//             return true;
+//         }else {
+//             return false;
+//         }
+// }
+//     function isNumeric(x) {
+//         return !isNaN(parseFloat(x));
+
+    //
+    // console.log(isNotString(2)); //true
+    // console.log(isNotString(true)); //true
+    // console.log(isNotString("yes")); //false
+
+
+
+    // Define a function named isNotEmptyString that takes in a value and returns a boolean if the argument provided is an empty string or not.
+
+function isNotEmptyString (x){
+        if(typeof x == "string" && x.length > 0){
+            return true;
+        } else {
+            return false;
+        }
+}
+    //
+    //
+    // console.log(isNotEmptyString(2)); //false
+    // console.log(isNotEmptyString(false)); //false
+    // console.log(isNotEmptyString(true)); //false
+    // console.log(isNotEmptyString("yes")); //true
+    // console.log(isNotEmptyString("")); //false
+    // console.log(isNotEmptyString("banana")); //true
+
+
+    // Define a function named isANumber that takes in a value and returns true if the input is a number.
+// isANumber(x)
+//     function isANumber(x){
+//         if(typeof x === "number"){
+//             return true;
+//         } else{
+//             return false;
+//         }
+//
+//     }
+
+    //
+    // console.log(isANumber(2)); //true
+    // console.log(isANumber("yes")); //false
+    // console.log(isANumber(false)); //false
+    // console.log(isANumber(true)); //false
+    // console.log(isANumber("5")); //false
+
+
+    // Define a function named isNumeric that takes in a value and returns true if the input is numeric or not. Numeric strings are numeric and should return true.
+//
+// function isNumeric (x){
+//         if(! isNaN (parseFloat(x))){
+//             return true;
+//         } else {
+//             return false;
+//         }
+//
+// }
+
+
+
+    // console.log(isNumeric(2)); //true
+    // console.log(isNumeric("yes")); //false
+    // console.log(isNumeric(false)); //false
+    // console.log(isNumeric(true)); //false
+    // console.log(isNumeric("5")); //true
+
+
+    // Define a function named isZero that will return true when passed an argument of the numeric value 0, and return false for all other arguments.
+
+function isZero (x) {
+    var y = parseInt(x);
+    return y === 0;
+}
+    //
+    // console.log(isZero(0)); //true
+    // console.log(isZero(12)); //false
+    // console.log(isZero("yes")); //false
+    // console.log(isZero(false)); //false
+    // console.log(isZero(true)); //false
+    // console.log(isZero("0")); //true
+    // console.log(isZero(10)); //false
+    // console.log(isZero("10")); //false
+
+    function isTen(x) {
+        var y = parseInt(x);
+        if (y === 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    // Define a function named isMoreThanTen that accepts a number and returns true or false based on whether the input is more than ten.
+
+    // function isMoreThanTen(x) {
+    //     if (x > 10)
+    //     {
+    //         return true;
+    //     }
+    //      else {
+    //         return false;
+    //     }
+    // }
+
+
+    function isMoreThanTen(x){
+        return (x > 10);
+    }
+
+
+    //
+    // console.log(isMoreThanTen(2)); //false
+    // console.log(isMoreThanTen(12)); //true
+    // console.log(isMoreThanTen("yes")); //false
+    // console.log(isMoreThanTen(false)); //false
+    // console.log(isMoreThanTen(true)); //false
+    // console.log(isMoreThanTen("5")); //false
+
+
+
+    // Define a function named isPositive that accepts an input and returns true or false based on whether the input is above zero. Any non-numeric input should return false.
+
+function isPositive(x){
+        var x = (parseFloat(x));
+        if((x > 0) && (typeof x == "number")){
+            return true;
+        }else {
+            return false;
+        }
+}
+    //
+    // console.log(isPositive(-2)); //true
+    // console.log(isPositive(12)); //false
+    // console.log(isPositive("yes")); //false
+    // console.log(isPositive(false)); //false
+    // console.log(isPositive(true)); //false
+    // console.log(isPositive("5")); //false
+
+    var carsList = [
+        {
+            make: 'Volvo',
+            color: 'red',
+            year: 1996,
+            isDirty: true
+        },
+        {
+            make: 'Toyota',
+            color: 'black',
+            year: 2004,
+            isDirty: false
+        },
+        {
+            make: 'Ford',
+            color: 'white',
+            year: 2007,
+            isDirty: true
+        }
+    ];
+
+function washCars(cars) {
+    cars.forEach(function (car) {
+        // if (car.isDirty === true) {
+            car.isDirty = false;
+            // console.log(car.isDirty);
+            // car.isDirty === false;
+        // }
+    });
+    return cars;
+}
+// console.log(washCars(carsList));
+
+    // 1.  Write a function, `filterNumbers()` that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
+// ​
+//     ```js
+//         filterNumbers(["fred", true, 5, 3]) //[3, 5]
+//     ```
+
+
+
+    function filterNumbers(arr) {
+        var onlyNums = [];
+        for(var i =0; i < arr.length ; i++ ){
+            if(typeof arr[i] === 'number'){
+                onlyNums.push(arr[i]);
+            }
+        }
+        return onlyNums;
+
+    }
+// console.log(filterNumbers(["fred", true, 5, 3]));
+
+//     Write a function, `getOlder()` that takes in array of dog objects and increases the value of the age properties by 1.
+// ​
+//    ```js
+//
+    var dogsList = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+
+function getOlder(dogs) {
+
+    // for (var i = 0; i < dogs.length; i++){
+    //     dogs[i].age += 1;
+    // }
+
+
+    dogs.forEach(function (dog) {
+            dog.age += 1;
+            // dog.age = dog.age + 1;
+    });
+    return dogs;
+}
+
+// console.log(getOlder(dogsList));
+
+//     Write a function, `adminList()` that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
+
+
+
+    function adminList(arr){
+    // var adminCount =0;
+    // var adminEmail = [];
+        var admin= [];
+    for(var i = 0; i < arr.length; i++ ){
+        if(arr[i].isAdmin){
+            // adminCount += 1;
+            // return adminCount;
+           // adminEmail.push( arr[i].email);
+            admin.push(arr[i])
+        }
+
+    }
+// return adminEmail;
+//         return adminCount;
+        return admin;
+    }
+
+
+
+//         ```js
+         var usersList =
+          [
+             {
+                 isAdmin: true,
+                 email: 'user1@email.com'
+             },
+             {
+                 isAdmin: true,
+                 email: 'user2@email.com'
+             },
+             {
+                 isAdmin: false,
+                 email: 'user3@email.com'
+             }
+         ];
+//     ```
+
+    // console.log(adminList(usersList));
+
+//     Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
+//          makeSandwichObjects(breads, fillings) // example call to the function
+
+             var breadsList  = [
+                 "white",
+                 "wheat",
+                 "rhy",
+                 "white"
+             ];
+
+             var fillingsList = [
+                 "pb&j",
+                 "ham",
+                 "cheese steak",
+                 "tuna"
+             ];
+
+
+function makeSandwichObjects(breads, fillings){
+    var sandwich = [];
+    for(var i=0; i < breads.length; i++){
+
+        var sandwichObject = {
+            bread: breads[i],
+            filling: fillings[i],
+            // bread2: breads[i],
+        };
+
+
+        // sandwich.push({
+        //     bread: breads[i],
+        //     filling: fillings[i],
+        // });
+    }
+    return sandwich;
+}
+
+// console.log(makeSandwichObjects(breadsList, fillingsList));
+
+
+    // TODO Write a function named keepYellow that accepts an array of strings and returns an array with all the strings that are equal to "yellow"
+
+    function keepYellow(arr){
+    var yellowArr = [];
+    for( var i =0; i <arr.length; i++){
+        if(arr[i] === "yellow"){
+            yellowArr.push(arr[i]);
+        }
+    }
+    return yellowArr;
+    }
+
+    // console.log(keepYellow(["yellow", "red", "blue", "yellow", "black", "brown", "yellow"]));
+
+
+    var weather = [
+        {
+            name : "rainy",
+            icon : url("img/icon.jpg")
+        },
+        {
+            name : "sunny",
+            icon : url("img/sunny-icon.jpg")
+        }
+    ];
+
+</script>
+</body>
+</html>
+
+
+
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      	<div class="row">
+		<!-- Certificate-1 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a7275d3466f4.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Certificate-2 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a7275fd335c7.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Certificate-3 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a727612d764a.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+	</div>
+    </div>
+    <div class="carousel-item">
+      	<div class="row">
+		 <!-- Certificate-4 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a7276212bbb5.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Certificate-5 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a7276418748d.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Certificate-6 -->
+                    <div class="col-md-4">
+                      <div class="single-box">
+                        <div class="img-area">
+                          <img src="./assets/img/certificate/5a727643cbf2f.jpg" alt="Ricoma qatar">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Certificate-7 -->
+                    <!-- Certificate-8 -->
+	</div>
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
