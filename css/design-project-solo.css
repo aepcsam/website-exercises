@@ -1,0 +1,113 @@
+:root {
+    --page-background: #E6E6E6;
+    --navbar-background: #F0F0F0;
+    --design-icon: #E6563B;
+    --develop-icon: #EB9D3A;
+    --support-icon: #7CB06c;
+    --host-icon: #00ABA9;
+}
+
+.nav-background{
+    background-color: var(--navbar-background);
+    width: 100%;
+    height: 50px;
+}
+.logo{
+    width: 105px;
+    height:105px;
+    position: absolute;
+    top: 14px;
+    margin-left: 4px;
+}
+body {
+    background-color: lightgrey;
+}
+
+#nav-link-color {
+    color: black;
+}
+.heading-1{
+    font-size: 64px;
+    font-family: 'Anton', sans-serif;
+}
+.heading-2{
+    font-size: 48px;
+    font-family: 'Anton', sans-serif;
+}
+.heading-3{
+    font-size:40px;
+    font-family: 'abel', sans-serif;
+}
+.heading-4{
+    font-size:32px;
+    font-family: 'Anton', sans-serif;
+}
+.heading-5{
+    font-size:28px;
+    font-family: 'Anton', sans-serif;
+}
+.design-text{
+    font-family: 'abel', sans-serif;
+    font-size:40px;
+    /*font-weight: lighter;*/
+}
+
+.DESIGN-BUTTON{
+    border-radius: 50%;
+    height: 105px;
+    font-weight: bold;
+    width: 105px;
+    font-size: 15px;
+    border: solid white 6px;
+    background-color: var(--design-icon);
+}
+.DEVELOP-BUTTON{
+    border-radius: 50%;
+    height: 105px;
+    font-weight: bold;
+    width: 105px;
+    font-size: 15px;
+    border: solid white 6px;
+    background-color: var(--develop-icon);
+    padding: 8px;
+}
+.SUPPORT-BUTTON{
+    border-radius: 50%;
+    height: 105px;
+    font-weight: bold;
+    width: 105px;
+    font-size: 15px;
+    border: solid white 6px;
+    background-color: var(--support-icon);
+    padding: 8px;
+}
+.HOST-BUTTON{
+    border-radius: 50%;
+    height: 105px;
+    font-weight: bold;
+    width: 105px;
+    font-size: 15px;
+    border: solid white 6px;
+    background-color: var(--host-icon);
+}
+.pill{
+    color: black;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    padding-top: 4px;
+    font-family: 'abel', sans-serif;
+    /*padding-right:1px;*/
+
+}
+li {
+    list-style-type: none;
+}
+
+.small-img {
+    height: 50px;
+    width: 50px;
+    /*padding: 15px;*/
+    margin: 15px;
+}
